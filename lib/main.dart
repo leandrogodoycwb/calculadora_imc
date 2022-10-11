@@ -70,20 +70,20 @@ class _HomeState extends State<Home> {
         ),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
-          padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+          padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
           child: Form(
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Icon(Icons.person_outline, size: 120.0, color: Colors.green),
+                const Icon(Icons.person_outline, size: 120.0, color: Colors.green),
                 TextFormField(
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Peso (KG)",
                       labelStyle: TextStyle(color: Colors.green)),
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.green, fontSize: 25.0),
+                  style: const TextStyle(color: Colors.green, fontSize: 25.0),
                   controller: weightController,
                   validator: (value) {
                     if(value!.isEmpty) {
@@ -93,11 +93,11 @@ class _HomeState extends State<Home> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Altura (CM)",
                       labelStyle: TextStyle(color: Colors.green)),
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.green, fontSize: 25.0),
+                  style: const TextStyle(color: Colors.green, fontSize: 25.0),
                   controller: heigthController,
                   validator: (value) {
                     if(value!.isEmpty) {
@@ -106,7 +106,7 @@ class _HomeState extends State<Home> {
                   },
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                  padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
                   child: ElevatedButton(
                     onPressed: () {
                       if(_formKey.currentState!.validate()){
@@ -115,16 +115,16 @@ class _HomeState extends State<Home> {
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green,
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       textStyle: const TextStyle(fontSize: 25.0),
                     ),
-                    child: Text("Calcular"),
+                    child: const Text("Calcular"),
                   ),
                 ),
                 Text(
                   _infoText,
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.green, fontSize: 25.0),
+                  style: const TextStyle(color: Colors.green, fontSize: 25.0),
                 ),
               ],
             ),
